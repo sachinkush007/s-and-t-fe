@@ -35,6 +35,8 @@
 .hire-hero-image{
   width:100%;
   max-width:400px;
+  animation: float 4s ease-in-out infinite;
+
 }
 
 .hire-form-section{
