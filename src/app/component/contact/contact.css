@@ -1,0 +1,147 @@
+.contact-hero-section{
+  background:linear-gradient(135deg,#071c45,#0f2a57);
+  color:white;
+  padding:80px 0;
+}
+
+.min-vh-55{
+  min-height:55vh;
+}
+
+.contact-badge{
+  background:rgba(255,255,255,0.12);
+  padding:8px 18px;
+  border-radius:30px;
+  display:inline-block;
+  font-size:14px;
+}
+
+.contact-hero-title{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.2;
+}
+
+.contact-hero-title span{
+  color:#d4a437;
+}
+
+.contact-hero-description{
+  color:#d9d9d9;
+  font-size:18px;
+  max-width:550px;
+}
+
+.contact-hero-image{
+  width:100%;
+  max-width:420px;
+  animation: float 4s ease-in-out infinite;
+
+}
+
+.contact-info-section,
+.contact-form-section{
+  padding:80px 0;
+}
+
+.contact-info-card{
+  background:white;
+  border-radius:18px;
+  padding:34px 22px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+  height:100%;
+  transition:0.3s;
+}
+
+.contact-info-card:hover{
+  transform:translateY(-8px);
+}
+
+.contact-info-card i{
+  font-size:40px;
+  color:#d4a437;
+  margin-bottom:18px;
+}
+
+.contact-info-card h4{
+  color:#071c45;
+  font-weight:700;
+}
+
+.contact-info-card p{
+  color:#666;
+  margin-bottom:0;
+}
+
+.section-tag{
+  color:#d4a437;
+  font-weight:700;
+}
+
+.section-title{
+  color:#071c45;
+  font-size:42px;
+  font-weight:800;
+}
+
+.section-description{
+  color:#666;
+  line-height:1.8;
+}
+
+.contact-form-card{
+  background:white;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-input{
+  height:48px;
+  border-radius:12px;
+  border:1px solid #dfe5ef;
+}
+
+textarea.contact-input{
+  height:auto;
+  padding:12px 14px;
+}
+
+.contact-input:focus{
+  box-shadow:none;
+  border-color:#0f2a57;
+}
+
+.send-btn{
+  background:linear-gradient(135deg,#0f2a57,#183d7c);
+  color:white;
+  border-radius:30px;
+  padding:12px 28px;
+  font-weight:700;
+}
+
+.send-btn:hover{
+  background:linear-gradient(135deg,#d4a437,#e0b64d);
+  color:#0f2a57;
+}
+
+@media(max-width:991px){
+  .contact-hero-section{
+    text-align:center;
+    padding:60px 0;
+  }
+
+  .contact-hero-title{
+    font-size:36px;
+  }
+
+  .contact-hero-description{
+    font-size:16px;
+    margin:auto;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+}

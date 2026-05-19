@@ -1,0 +1,206 @@
+/* ================= HERO SECTION ================= */
+
+.hero-section{
+  background:linear-gradient(135deg,#071c45,#0f2a57);
+  color:white;
+  padding:80px 0;
+  overflow:hidden;
+  /* margin-top: -65px; */
+}
+
+.min-vh-75{
+  min-height:75vh;
+}
+
+.hero-badge{
+  background:rgba(255,255,255,0.12);
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:14px;
+  display:inline-block;
+}
+
+.hero-title{
+  font-size:54px;
+  font-weight:800;
+  line-height:1.2;
+}
+
+.hero-title span{
+  color:#d4a437;
+}
+
+.hero-description{
+  font-size:18px;
+  color:#d9d9d9;
+  max-width:550px;
+}
+
+.hero-buttons .btn{
+  padding:12px 28px;
+  border-radius:30px;
+  font-weight:700;
+}
+
+.explore-btn{
+  background:#d4a437;
+  color:#071c45;
+}
+
+.explore-btn:hover{
+  background:white;
+}
+
+.contact-btn{
+  border:2px solid white;
+  color:white;
+}
+
+.contact-btn:hover{
+  background:white;
+  color:#071c45;
+}
+
+.hero-image{
+  width:100%;
+  max-width:420px;
+  animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0px);
+  }
+  50%{
+    transform:translateY(-15px);
+  }
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* ================= SERVICES ================= */
+
+.services-section{
+  padding:90px 0;
+  background:#f8f9fc;
+}
+
+.section-title h2{
+  color:#071c45;
+  font-weight:800;
+}
+
+.section-title p{
+  color:#666;
+}
+
+.service-card{
+  background:white;
+  padding:35px 25px;
+  border-radius:18px;
+  text-align:center;
+  transition:0.3s;
+  height:100%;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
+}
+
+.service-card:hover{
+  transform:translateY(-8px);
+}
+
+.service-icon{
+  width:75px;
+  height:75px;
+  background:#071c45;
+  color:#d4a437;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:auto;
+  font-size:28px;
+  margin-bottom:20px;
+}
+
+.service-card h4{
+  font-weight:700;
+  color:#071c45;
+}
+
+.service-card p{
+  color:#666;
+}
+
+/* ================= ABOUT ================= */
+
+.about-section{
+  padding:90px 0;
+}
+
+.about-image{
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.about-tag{
+  color:#d4a437;
+  font-weight:700;
+}
+
+.about-title{
+  color:#071c45;
+  font-size:42px;
+  font-weight:800;
+}
+
+.about-text{
+  color:#666;
+  line-height:1.8;
+}
+
+.about-btn{
+  background:#071c45;
+  color:white;
+  padding:12px 26px;
+  border-radius:30px;
+  font-weight:700;
+}
+
+.about-btn:hover{
+  background:#d4a437;
+  color:#071c45;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:991px){
+
+  .hero-section{
+    text-align:center;
+    padding:60px 0;
+  }
+
+  .hero-title{
+    font-size:38px;
+  }
+
+  .hero-description{
+    font-size:16px;
+    margin:auto;
+  }
+
+  .hero-buttons .btn{
+    width:100%;
+    margin-top:12px;
+  }
+
+  .contact-btn{
+    margin-left:0 !important;
+  }
+
+  .about-title{
+    font-size:32px;
+  }
+
+}

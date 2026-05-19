@@ -1,0 +1,131 @@
+.hire-hero-section{
+  background:linear-gradient(135deg,#071c45,#0f2a57);
+  color:white;
+  padding:80px 0;
+}
+
+.min-vh-60{
+  min-height:60vh;
+}
+
+.hire-badge{
+  background:rgba(255,255,255,0.12);
+  padding:8px 18px;
+  border-radius:30px;
+  display:inline-block;
+  font-size:14px;
+}
+
+.hire-hero-title{
+  font-size:52px;
+  font-weight:800;
+  line-height:1.2;
+}
+
+.hire-hero-title span{
+  color:#d4a437;
+}
+
+.hire-hero-description{
+  color:#d9d9d9;
+  font-size:18px;
+  max-width:550px;
+}
+
+.hire-hero-image{
+  width:100%;
+  max-width:400px;
+}
+
+.hire-form-section{
+  padding:80px 0;
+  background:#f8f9fc;
+}
+
+.hire-form-card{
+  background:white;
+  border-radius:22px;
+  padding:38px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
+  border:1px solid #eef2f7;
+}
+
+.section-tag{
+  color:#d4a437;
+  font-weight:700;
+}
+
+.section-title{
+  color:#071c45;
+  font-size:42px;
+  font-weight:800;
+}
+
+.section-description{
+  color:#666;
+  line-height:1.8;
+  max-width:720px;
+}
+
+.form-label{
+  color:#071c45;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.hire-input{
+  height:48px;
+  border-radius:12px;
+  border:1px solid #dfe5ef;
+  padding:10px 14px;
+}
+
+textarea.hire-input{
+  height:auto;
+}
+
+.hire-input:focus{
+  box-shadow:none;
+  border-color:#0f2a57;
+}
+
+.submit-btn{
+  background:linear-gradient(135deg,#0f2a57,#183d7c);
+  color:white;
+  border-radius:30px;
+  padding:12px 30px;
+  font-weight:700;
+}
+
+.submit-btn:hover{
+  background:linear-gradient(135deg,#d4a437,#e0b64d);
+  color:#0f2a57;
+}
+
+@media(max-width:991px){
+  .hire-hero-section{
+    text-align:center;
+    padding:60px 0;
+  }
+
+  .hire-hero-title{
+    font-size:36px;
+  }
+
+  .hire-hero-description{
+    font-size:16px;
+    margin:auto;
+  }
+
+  .section-title{
+    font-size:32px;
+  }
+
+  .hire-form-card{
+    padding:26px 18px;
+  }
+
+  .submit-btn{
+    width:100%;
+  }
+}

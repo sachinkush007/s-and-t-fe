@@ -1,0 +1,227 @@
+.st-header{
+  width:100%;
+  position:sticky;
+  top:0;
+  z-index:999;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ================= TOP BAR ================= */
+
+.topbar{
+  background:linear-gradient(90deg,#071c45,#0f2a57);
+  color:white;
+  font-size:13px;
+    /* background: linear-gradient(90deg, #0d8aa8, #0d8aa8); */
+
+}
+.main-navbar{
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+  /* border-radius: 0 0 18px 18px; */
+  margin-top: -1px;
+  position: relative;
+  z-index: 1000;
+  padding: 14px 0;
+}
+
+.topbar-inner{
+  min-height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.topbar-left{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:500;
+}
+
+.topbar-left i{
+  color:#d4a437;
+}
+
+/* Right Social Icons */
+
+.topbar-right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.social-icon{
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+  font-size:15px;
+}
+
+.social-icon:hover{
+  background:#d4a437;
+  color:#0f2a57;
+  transform:translateY(-2px);
+}
+
+/* ================= LOGO SECTION ================= */
+
+.brand-box{
+  text-decoration:none;
+}
+
+.logo-wrapper{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  line-height:1.1;
+}
+
+/* Logo Size */
+
+.brand-logo{
+  width:90px;
+  height:auto;
+  object-fit:contain;
+margin-top: -18px;
+}
+
+/* Text Under Logo */
+
+.logo-text{
+  text-align:center;
+  margin-top:-16px;
+}
+
+.logo-text h5{
+  margin:0;
+  color:#0f2a57;
+  font-weight:700;
+  font-size:14px;
+}
+
+.logo-text p{
+  margin:10;
+  color:#c89b2c;
+  font-size:10px;
+  font-weight:600;
+}
+
+/* ================= NAV LINKS ================= */
+
+.nav-links .nav-link{
+  color:#0f2a57;
+  font-weight:700;
+  padding:10px 16px;
+  transition:0.3s;
+  position:relative;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active{
+  color:#c89b2c !important;
+}
+
+/* Underline Animation */
+
+.nav-links .nav-link::after{
+  content:'';
+  position:absolute;
+  left:16px;
+  bottom:5px;
+  width:0;
+  height:2px;
+  background:#c89b2c;
+  transition:0.3s;
+}
+
+.nav-links .nav-link:hover::after,
+.nav-links .nav-link.active::after{
+  width:calc(100% - 32px);
+}
+
+/* ================= BUTTON ================= */
+
+.hire-btn{
+  background:linear-gradient(135deg,#0f2a57,#183d7c);
+  color:white;
+  border:none;
+  border-radius:30px;
+  padding:10px 24px;
+  font-weight:700;
+  transition:0.3s;
+}
+
+.hire-btn:hover{
+  background:linear-gradient(135deg,#c89b2c,#e0b64d);
+  color:#0f2a57;
+}
+
+/* ================= TOGGLER ================= */
+
+.custom-toggler{
+  border:1px solid rgba(15,42,87,0.2);
+  box-shadow:none !important;
+}
+
+.custom-toggler:focus{
+  box-shadow:none !important;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media(max-width:991px){
+
+  .topbar-inner{
+    justify-content:center;
+    text-align:center;
+    gap:5px;
+    padding:8px 0;
+  }
+
+  .topbar-left,
+  .topbar-right{
+    justify-content:center;
+    width:100%;
+  }
+
+  .navbar-collapse{
+    margin-top:15px;
+  }
+
+  .nav-links{
+    text-align:center;
+  }
+
+  .nav-links .nav-link::after{
+    display:none;
+  }
+
+  .hire-btn{
+    width:100%;
+    margin-top:10px;
+  }
+
+  .brand-logo{
+    width:75px;
+  }
+
+  .logo-text h5{
+    font-size:12px;
+  }
+
+  .logo-text p{
+    font-size:9px;
+  }
+
+}
