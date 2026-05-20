@@ -11,10 +11,11 @@ import { Admissions } from './component/admissions/admissions';
 import { Contact } from './component/contact/contact';
 import { Footer } from './component/footer/footer';
 import { Hiring } from './component/hiring/hiring';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [App, Navbar, Home, About, Jobs, Admissions, Contact, Footer, Hiring],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), provideClientHydration(withEventReplay())],
   bootstrap: [App],
 })

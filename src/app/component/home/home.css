@@ -79,6 +79,90 @@
   }
 }
 
+/* payment sectiion css */
+
+.pay-section{
+  padding: 80px 0;
+  background: #f8f9fc;
+}
+
+.pay-card{
+  background: white;
+  border-radius: 20px;
+  padding: 35px 25px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  height: 100%;
+  transition: 0.3s;
+}
+
+.pay-card:hover{
+  transform: translateY(-8px);
+}
+
+.pay-icon{
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 30px;
+  color: white;
+}
+
+.admission-card .pay-icon{
+  background: linear-gradient(135deg, #d4a437, #e0b64d);
+}
+
+.job-card .pay-icon{
+  background: linear-gradient(135deg, #071c45, #183d7c);
+}
+
+.pay-card h4{
+  color: #071c45;
+  font-weight: 800;
+}
+
+.pay-card p{
+  color: #666;
+  margin: 15px 0 25px;
+}
+
+.pay-btn{
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  font-weight: 700;
+}
+
+.admission-btn{
+  background: linear-gradient(135deg, #d4a437, #e0b64d);
+  color: #071c45;
+}
+
+.admission-btn:hover{
+  background: linear-gradient(135deg, #071c45, #183d7c);
+  color: white;
+}
+
+.job-btn{
+  background: linear-gradient(135deg, #071c45, #183d7c);
+  color: white;
+}
+
+.job-btn:hover{
+  background: linear-gradient(135deg, #d4a437, #e0b64d);
+  color: #071c45;
+}
+
+@media(max-width:991px){
+  .pay-section{
+    padding: 60px 0;
+  }
+}
+
 /* ================= SERVICES ================= */
 
 .services-section{

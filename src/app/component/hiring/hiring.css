@@ -131,3 +131,39 @@ textarea.hire-input{
     width:100%;
   }
 }
+
+.success-modal{
+  border:none;
+  border-radius:24px;
+  overflow:hidden;
+}
+
+.success-icon i{
+  font-size:80px;
+  color:#28c76f;
+}
+
+.success-modal h3{
+  color:#071c45;
+  font-weight:800;
+}
+
+.success-modal p{
+  color:#666;
+  font-size:17px;
+  line-height:1.7;
+}
+
+.success-btn{
+  background:linear-gradient(135deg,#071c45,#183d7c);
+  color:white;
+  border:none;
+  border-radius:30px;
+  padding:10px 30px;
+  font-weight:700;
+}
+
+.success-btn:hover{
+  background:#d4a437;
+  color:#071c45;
+}
