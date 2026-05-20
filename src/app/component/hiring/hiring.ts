@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 declare var bootstrap: any;
 
 @Component({
@@ -7,6 +7,7 @@ declare var bootstrap: any;
   templateUrl: './hiring.html',
   styleUrl: './hiring.css',
 })
+
 export class Hiring {
 
   isSubmitting = false;
@@ -22,40 +23,48 @@ export class Hiring {
     details: ''
   };
 
-  private readonly sheetApiUrl = 'https://script.google.com/macros/s/AKfycbx6vBZ-OO7eLg2Vhho8TXP-uguZm6almtJTY-DCM5MxZlhz86xWix7suQeEm9mR3mf5pg/exec';
+  private readonly sheetApiUrl =
+    'https://script.google.com/macros/s/AKfycbx6vBZ-OO7eLg2Vhho8TXP-uguZm6almtJTY-DCM5MxZlhz86xWix7suQeEm9mR3mf5pg/exec';
 
- async submitForm(): Promise<void> {
-  this.isSubmitting = true;
+  constructor(private cdr: ChangeDetectorRef) {}
 
-  try {
-    const response = await fetch(this.sheetApiUrl, {
-      method: 'POST',
-      mode: 'no-cors',
-      body: JSON.stringify(this.formData)
-    });
+  async submitForm(): Promise<void> {
+    this.isSubmitting = true;
+    this.cdr.detectChanges();
 
-    this.isSubmitting = false;
+    try {
+      await fetch(this.sheetApiUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify(this.formData)
+      });
 
-    const modal = new bootstrap.Modal(
-      document.getElementById('successModal') as HTMLElement
-    );
-    modal.show();
+      this.isSubmitting = false;
+      this.cdr.detectChanges();
 
-    this.formData = {
-      fullName: '',
-      companyName: '',
-      phone: '',
-      email: '',
-      service: '',
-      expectedHiringCount: '',
-      location: '',
-      details: ''
-    };
+      const modal = new bootstrap.Modal(
+        document.getElementById('successModal') as HTMLElement
+      );
+      modal.show();
 
-  } catch (error) {
-    console.error(error);
-    this.isSubmitting = false;
-    alert('Failed to submit form');
+      this.formData = {
+        fullName: '',
+        companyName: '',
+        phone: '',
+        email: '',
+        service: '',
+        expectedHiringCount: '',
+        location: '',
+        details: ''
+      };
+
+      this.cdr.detectChanges();
+
+    } catch (error) {
+      console.error(error);
+      this.isSubmitting = false;
+      this.cdr.detectChanges();
+      alert('Failed to submit form');
+    }
   }
-}
 }

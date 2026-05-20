@@ -254,14 +254,28 @@
 
               <div class="col-12 text-center mt-2">
 
-                <button
+                <!-- <button
                   type="submit"
                   class="btn submit-btn"
                 >
 
                   Submit Request
 
-                </button>
+                </button> -->
+
+
+                <button
+  type="submit"
+  class="btn submit-btn"
+  [disabled]="isSubmitting"
+>
+  <span *ngIf="!isSubmitting">Submit Request</span>
+
+  <span *ngIf="isSubmitting" class="d-inline-flex align-items-center gap-2">
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Sending...
+  </span>
+</button>
 
               </div>
 

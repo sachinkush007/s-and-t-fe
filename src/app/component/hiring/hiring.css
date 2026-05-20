@@ -167,3 +167,21 @@ textarea.hire-input{
   background:#d4a437;
   color:#071c45;
 }
+
+.loader-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 28, 69, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  backdrop-filter: blur(4px);
+}
+
+.loader-box{
+  background: rgba(15, 42, 87, 0.95);
+  padding: 28px 34px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
