@@ -28,11 +28,7 @@
 
         <div class="logo-floating-box">
 
-          <img
-            src="assets/st2.png"
-            alt="Hire Now"
-            class="hire-hero-image"
-          >
+          <img src="assets/snt2.png" alt="Hire Now" class="hire-hero-image">
 
         </div>
 
@@ -86,20 +82,14 @@
                   Full Name
                 </label>
 
-                <input
-                  type="text"
-                  class="form-control hire-input"
-                  placeholder="Enter your name"
-                  name="fullName"
-                  [(ngModel)]="formData.fullName"
-                  required
-                >
+                <input type="text" class="form-control hire-input" placeholder="Enter your name" name="fullName"
+                  [(ngModel)]="formData.fullName" required>
 
               </div>
 
               <!-- COMPANY -->
 
-              <div class="col-md-6">
+              <!-- <div class="col-md-6">
 
                 <label class="form-label">
                   Company / Organization
@@ -114,7 +104,7 @@
                   required
                 >
 
-              </div>
+              </div> -->
 
               <!-- PHONE -->
 
@@ -124,14 +114,8 @@
                   Phone Number
                 </label>
 
-                <input
-                  type="text"
-                  class="form-control hire-input"
-                  placeholder="Enter phone number"
-                  name="phone"
-                  [(ngModel)]="formData.phone"
-                  required
-                >
+                <input type="text" class="form-control hire-input" placeholder="Enter phone number" name="phone"
+                  [(ngModel)]="formData.phone" required>
 
               </div>
 
@@ -143,23 +127,39 @@
                   Email Address
                 </label>
 
-                <input
-                  type="email"
-                  class="form-control hire-input"
-                  placeholder="Enter email address"
-                  name="email"
-                  [(ngModel)]="formData.email"
-                  required
-                >
+                <input type="email" class="form-control hire-input" placeholder="Enter email address" name="email"
+                  [(ngModel)]="formData.email" required>
+
+              </div>
+
+              <div class="col-md-6">
+
+                <label class="form-label">
+                  Location
+                </label>
+
+                <input type="text" class="form-control hire-input" placeholder="Location" name="location"
+                  [(ngModel)]="formData.location" required>
+
+              </div>
+
+              <div class="col-md-6">
+
+                <label class="form-label">
+                  Role Applied For
+                </label>
+
+                <input type="text" class="form-control hire-input" placeholder="Role Applied For" name="roleAppliedFor"
+                  [(ngModel)]="formData.roleAppliedFor" required>
 
               </div>
 
               <!-- SERVICE -->
 
-              <div class="col-md-6">
+              <!-- <div class="col-md-6">
 
                 <label class="form-label">
-                  Required Service
+                   Role Applied For
                 </label>
 
                 <select
@@ -191,11 +191,11 @@
 
                 </select>
 
-              </div>
+              </div> -->
 
               <!-- HIRING COUNT -->
 
-              <div class="col-md-6">
+              <!-- <div class="col-md-6">
 
                 <label class="form-label">
                   Expected Hiring Count
@@ -210,11 +210,11 @@
                   required
                 >
 
-              </div>
+              </div> -->
 
               <!-- LOCATION -->
 
-              <div class="col-12">
+              <!-- <div class="col-12">
 
                 <label class="form-label">
                   Location
@@ -229,8 +229,18 @@
                   required
                 >
 
-              </div>
+              </div> -->
 
+              <div class="col-md-6">
+
+                <label class="form-label">
+                  Upload Resume
+                </label>
+
+                <input type="file" class="form-control hire-input" accept=".pdf,.doc,.docx"
+                  (change)="onFileSelected($event)">
+
+              </div>
               <!-- DETAILS -->
 
               <div class="col-12">
@@ -239,14 +249,9 @@
                   Describe Your Requirement
                 </label>
 
-                <textarea
-                  class="form-control hire-input"
-                  rows="6"
-                  placeholder="Tell us about the job role, skills, timing, and any other details"
-                  name="details"
-                  [(ngModel)]="formData.details"
-                  required
-                ></textarea>
+                <textarea class="form-control hire-input" rows="6"
+                  placeholder="Tell us about the job role, skills, timing, and any other details" name="details"
+                  [(ngModel)]="formData.details" required></textarea>
 
               </div>
 
@@ -264,17 +269,14 @@
                 </button> -->
 
 
-                <button
+ <button
   type="submit"
   class="btn submit-btn"
   [disabled]="isSubmitting"
 >
-  <span *ngIf="!isSubmitting">Submit Request</span>
 
-  <span *ngIf="isSubmitting" class="d-inline-flex align-items-center gap-2">
-    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-    Sending...
-  </span>
+  {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
+
 </button>
 
               </div>
@@ -297,12 +299,7 @@
 
 <!-- SUCCESS MODAL -->
 
-<div
-  class="modal fade"
-  id="successModal"
-  tabindex="-1"
-  aria-hidden="true"
->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
 
   <div class="modal-dialog modal-dialog-centered">
 
@@ -325,11 +322,7 @@
           We will get in touch with you soon.
         </p>
 
-        <button
-          type="button"
-          class="btn success-btn mt-3"
-          data-bs-dismiss="modal"
-        >
+        <button type="button" class="btn success-btn mt-3" data-bs-dismiss="modal">
           OK
         </button>
 

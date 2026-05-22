@@ -26,7 +26,7 @@
 
         <div class="hero-buttons mt-4">
 
-          <button class="btn explore-btn">
+          <button class="btn explore-btn" routerLink="/jobs">
             Explore Jobs
           </button>
 
@@ -42,7 +42,7 @@
       <div class="col-lg-6 text-center">
 
         <img
-          src="assets/st2.png"
+          src="assets/snt2.png"
           alt="S&T"
           class="hero-image"
         >
@@ -55,47 +55,6 @@
 
 </section>
 
-<!-- payment section -->
-<section class="pay-section">
-  <div class="container">
-    <div class="text-center mb-4">
-      <!-- <span class="section-tag">Quick Payment</span> -->
-      <h2 class="section-title mt-3">Pay for Admission or Job</h2>
-      <p class="section-description mx-auto">
-        Choose the service you want and make payment in a simple way.
-      </p>
-    </div>
-
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-6 col-lg-5">
-        <div class="pay-card admission-card">
-          <div class="pay-icon">
-            <i class="bi bi-mortarboard-fill"></i>
-          </div>
-          <h4>Pay for Admission</h4>
-          <p>
-            Complete your admission payment quickly and securely.
-          </p>
-          <button class="btn pay-btn admission-btn" (click)="payNow('admission')">Pay Now</button>
-
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-5">
-        <div class="pay-card job-card">
-          <div class="pay-icon">
-            <i class="bi bi-briefcase-fill"></i>
-          </div>
-          <h4>Pay for Job</h4>
-          <p>
-            Submit your job-related payment without any confusion.
-          </p>
-          <button class="btn pay-btn job-btn" (click)="payNow('job')">Pay Now</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- SERVICES SECTION -->
 <section class="services-section">
@@ -177,6 +136,47 @@
 
 </section>
 
+<!-- payment section -->
+<section class="pay-section">
+  <div class="container">
+    <div class="text-center mb-4">
+      <!-- <span class="section-tag">Quick Payment</span> -->
+      <h2 class="section-title mt-3">Registration for Admission or Job</h2>
+      <p class="section-description mx-auto">
+        Choose the service you want and make payment in a simple way.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="pay-card admission-card">
+          <div class="pay-icon">
+            <i class="bi bi-mortarboard-fill"></i>
+          </div>
+          <h4>Registration for Admission</h4>
+          <p>
+            Complete your admission payment quickly and securely.
+          </p>
+          <button class="btn pay-btn admission-btn" (click)="payNow('admission')">Pay Now</button>
+
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-5">
+        <div class="pay-card job-card">
+          <div class="pay-icon">
+            <i class="bi bi-briefcase-fill"></i>
+          </div>
+          <h4>Registration for Job</h4>
+          <p>
+            Submit your job-related payment without any confusion.
+          </p>
+          <button class="btn pay-btn job-btn" (click)="payNow('job')">Pay Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT SECTION -->
 <section class="about-section">

@@ -2,6 +2,7 @@
 /* styles.css */
 .hero-image{
   animation: float 4s ease-in-out infinite;
+  /* height: 300px; */
 }
 
 @keyframes float{
