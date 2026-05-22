@@ -70,7 +70,7 @@
 
           <!-- FORM -->
 
-          <form (ngSubmit)="submitForm()">
+          <form #hireForm="ngForm" (ngSubmit)="submitForm()">
 
             <div class="row g-3">
 
@@ -83,7 +83,11 @@
                 </label>
 
                 <input type="text" class="form-control hire-input" placeholder="Enter your name" name="fullName"
-                  [(ngModel)]="formData.fullName" required>
+                  [(ngModel)]="formData.fullName" #fullName="ngModel" required>
+
+                <div class="text-danger mt-1" *ngIf="fullName.invalid && fullName.touched">
+                  Full Name is required
+                </div>
 
               </div>
 
@@ -114,8 +118,17 @@
                   Phone Number
                 </label>
 
-                <input type="text" class="form-control hire-input" placeholder="Enter phone number" name="phone"
-                  [(ngModel)]="formData.phone" required>
+                <input type="tel" class="form-control hire-input" placeholder="Enter 10 digit mobile number"
+                  name="phone" [(ngModel)]="formData.phone" #phone="ngModel" required pattern="[0-9]{10}"
+                  maxlength="10">
+
+                <div class="text-danger mt-1" *ngIf="phone.errors?.['required'] && phone.touched">
+                  Phone Number is required
+                </div>
+
+                <div class="text-danger mt-1" *ngIf="phone.errors?.['pattern'] && phone.touched">
+                  Enter valid 10 digit mobile number
+                </div>
 
               </div>
 
@@ -128,7 +141,11 @@
                 </label>
 
                 <input type="email" class="form-control hire-input" placeholder="Enter email address" name="email"
-                  [(ngModel)]="formData.email" required>
+                  [(ngModel)]="formData.email" #email="ngModel" required>
+
+                <div class="text-danger mt-1" *ngIf="email.invalid && email.touched">
+                  Valid Email is required
+                </div>
 
               </div>
 
@@ -139,7 +156,11 @@
                 </label>
 
                 <input type="text" class="form-control hire-input" placeholder="Location" name="location"
-                  [(ngModel)]="formData.location" required>
+                  [(ngModel)]="formData.location" #location="ngModel" required>
+
+                <div class="text-danger mt-1" *ngIf="location.invalid && location.touched">
+                  Location is required
+                </div>
 
               </div>
 
@@ -150,7 +171,11 @@
                 </label>
 
                 <input type="text" class="form-control hire-input" placeholder="Role Applied For" name="roleAppliedFor"
-                  [(ngModel)]="formData.roleAppliedFor" required>
+                  [(ngModel)]="formData.roleAppliedFor" #roleAppliedFor="ngModel" required>
+
+                <div class="text-danger mt-1" *ngIf="roleAppliedFor.invalid && roleAppliedFor.touched">
+                  Role Applied For is required
+                </div>
 
               </div>
 
@@ -238,22 +263,14 @@
                 </label>
 
                 <input type="file" class="form-control hire-input" accept=".pdf,.doc,.docx"
-                  (change)="onFileSelected($event)">
+                  (change)="onFileSelected($event)" required>
 
               </div>
               <!-- DETAILS -->
 
-              <div class="col-12">
-
-                <label class="form-label">
-                  Describe Your Requirement
-                </label>
-
-                <textarea class="form-control hire-input" rows="6"
-                  placeholder="Tell us about the job role, skills, timing, and any other details" name="details"
-                  [(ngModel)]="formData.details" required></textarea>
-
-              </div>
+              <textarea class="form-control hire-input" rows="6"
+                placeholder="Tell us about the job role, skills, timing, and any other details" name="details"
+                [(ngModel)]="formData.details"></textarea>
 
               <!-- BUTTON -->
 
@@ -269,15 +286,11 @@
                 </button> -->
 
 
- <button
-  type="submit"
-  class="btn submit-btn"
-  [disabled]="isSubmitting"
->
+                <button type="submit" class="btn submit-btn" [disabled]="hireForm.invalid || isSubmitting">
 
-  {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
+                  {{ isSubmitting ? 'Sending...' : 'Submit Request' }}
 
-</button>
+                </button>
 
               </div>
 
